@@ -1,42 +1,59 @@
-
-.modal-window{
+.modal-window {
   position: fixed;
+  padding: 28px 28px;
   z-index: 100;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -80%) scale(.9);
-  width: 280px;
-  height: 991px;
-  background-color:$main-color;
+  transform: translate(-50%, -80%) scale(0.9);
+  min-width: 280px;
+  min-height: 991px;
+  background-color: $main-color;
   border-radius: 10px;
   border: 2px solid $background-color-btn;
   transition: $animation;
   visibility: hidden;
-  opacity: 1;
-  overflow-y: scroll;
-  
-  &.show{
+  opacity: 0;
+
+  &.show {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
     visibility: visible;
   }
-  
-  &__backdrop{
+
+  &__backdrop {
     position: fixed;
     pointer-events: none;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(#000, .6);
+    background-color: rgba(#000, 0.6);
   }
 }
-.hidden{
+.hidden {
   opacity: 0;
   display: none;
 }
-  
-  
+.modal-close {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 12px;
+  right: 12px;
+  background-color: $main-color;
+  border: $main-color;
+}
+.modal-window__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-family;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $secondary-color;
+}
+
 // @media screen and (min-width: 480px) {
 //   .modal-window {
 //     position: fixed;
