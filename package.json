@@ -1,11 +1,11 @@
 {
-  "name": "parcel-project-template",
+  "name": "ice_cream",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://goitacademy.github.io/parcel-project-template",
+  "homepage": "https://Sanches2519.github.io/ice_cream",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url /ice_cream"
   },
   "repository": {
     "type": "git",

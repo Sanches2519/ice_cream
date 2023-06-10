@@ -1,0 +1,233 @@
+.button {
+  display: flex;
+  align-items: center;
+}
+
+.hero__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 108px;
+  height: 38px;
+  padding: 0;
+  margin-right: 12px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+  color: $text-color-btn;
+  background-color: $section-background-color;
+  border: 2px solid $background-color-btn;
+  border-radius: 8px;
+}
+.hero__btn:last-child {
+  margin-right: 0;
+}
+.hero__btn--dish {
+  width: 100px;
+  height: 24px;
+  padding: 0;
+  color: $background-color-btn;
+  text-decoration: underline;
+  border: 0;
+}
+.street-food__title {
+  display: flex;
+  flex-direction: column;
+  font-family: $font-family;
+  margin-bottom: 32px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.point-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.hero__img {
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+  background-size: auto;
+}
+.section-hero {
+  position: relative;
+}
+@media screen and (max-width: 1199px) {
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .section-hero {
+    padding-bottom: 12px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-hero {
+    padding-bottom: 150px;
+  }
+  .street-food__title {
+    font-size: 26px;
+    line-height: 1.26;
+
+    &--passion {
+      font-size: 34px;
+      line-height: 0.97;
+    }
+  }
+
+  .point-image {
+    height: 52px;
+    right: 0;
+    bottom: 0;
+  }
+  .hero__img {
+    right: 28px;
+    bottom: 0;
+  }
+  .lot-ice-cream {
+    display: none;
+  }
+  .institution{
+    display: none;
+  }
+}
+@media screen and (max-width: 479px) {
+  .section-hero {
+    padding-bottom: 236px;
+  }
+  .point-image {
+    width: 100%;
+    right: 0;
+    bottom: 0;
+  }
+  .hero__img {
+    width: 50%;
+    right: 83px;
+    bottom: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .button {
+    margin-bottom: 12px;
+  }
+  .street-food {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .street-food__title {
+    font-size: 26px;
+    line-height: 1.26;
+    margin-bottom: 24px;
+
+    &--passion {
+      font-size: 34px;
+      line-height: 0.97;
+    }
+  }
+  .institution__text {
+    margin-bottom: 4px;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 1.21;
+    text-align: right;
+    text-transform: uppercase;
+    color: $secondary-color;
+  }
+  .institution__desc {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+    text-align: right;
+    text-transform: none;
+    letter-spacing: 0;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  .hero__btn--dish {
+    width: 114px;
+    height: 24px;
+  }
+  .hero__img {
+    right: 92px;
+    bottom: 0;
+  }
+  .lot-ice-cream {
+    display: flex;
+    align-items: center;
+  }
+  .lot-ice-cream__img {
+    position: relative;
+    margin-right: 32px;
+    z-index: 1;
+  }
+
+  .attract_text {
+    width: 165px;
+    height: 68px;
+    margin-bottom: 29px;
+    font-family: $font-family-text-hero;
+    letter-spacing: 0;
+    font-size: 12px;
+    line-height: 140%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .heigth {
+    position: relative;
+    height: 546px;
+  }
+  .street-food__title {
+    font-size: 38px;
+    line-height: 1.26;
+    margin-bottom: 28px;
+
+    &--passion {
+      font-size: 38px;
+      line-height: 1.26;
+    }
+  }
+  .institution__text {
+    font-size: 46px;
+    line-height: 1.21;
+  }
+  .institution__desc {
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.21;
+  }
+  .hero__btn {
+    width: 134px;
+    height: 42px;
+    font-size: 14px;
+    line-height: 1.28;
+    border-radius: 10px;
+
+    &--dish {
+      width: 154px;
+      height: 40px;
+      line-height: 1.21;
+    }
+  }
+  .button {
+    margin-bottom: 42px;
+  }
+  .point-image {
+    right: -16px;
+    bottom: 0;
+  }
+  .lot-ice-cream__img {
+    margin-right: 16px;
+  }
+  .attract_text {
+    margin-bottom: 24px;
+    width: 200px;
+    height: 80px;
+    font-size: 14px;
+  }
+}

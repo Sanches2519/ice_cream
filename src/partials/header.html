@@ -1,0 +1,93 @@
+<header class="page-header">
+    <div class="container page-header__container">
+      <nav class="logo">
+        <a href="./index.html" class="logo__link link">
+          <svg class="logo__icon" width="40" height="37">
+            <use href="./images/symbol-defs.svg#icon-logo"></use>
+          </svg>
+        </a>
+      </nav>
+      <div class="navigation">
+        <div class="header-nav">
+          <ul class="header-nav__list list">
+            <li class="header-nav__item">
+              <a href="./index.html" class="header-nav__link link">Home</a>
+            </li>
+            <li class="header-nav__item">
+              <a href="" class="header-nav__link link">How it's made</a>
+            </li>
+            <li class="header-nav__item">
+              <a href="" class="header-nav__link link">Our products</a>
+            </li>
+            <li class="header-nav__item">
+              <a href="" class="header-nav__link link">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <button type="button" class="btn-buy js-modal" data-modal="#modal_1">
+          Buy now
+          <svg class="btn-buy__icon" width="12" height="12">
+            <use href="./images/symbol-defs.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="modal_1" class="modal-window">
+        <button class="modal-close" type="button">
+          <svg width="20" height="20">
+            <use href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+      <button type="button" class="mobile-menu-btn" data-menu-open>
+        <svg class="mobile-menu-btn__icon" width="32" height="32">
+          <use href="./images/symbol-defs.svg#icon-mobile-img"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-menu" data-menu>
+      <div class="container mobile-menu__container">
+        <button type="button" class="mobile-menu__btn-close" data-menu-close>
+          <svg class="mobile-menu-btn__icon" width="32" height="32">
+            <use href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="mobile-menu__nav">
+          <a href="./index.html" class="logo__link--nav link">
+            <svg class="logo__icon" width="40" height="37">
+              <use href="./images/symbol-defs.svg#icon-logo"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="nav">
+          <ul class="nav__list list">
+            <li class="nav__item">
+              <a href="./index.html" class="nav__link link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link link">How it's made</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link link">Our products</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link link">Contact</a>
+            </li>
+          </ul>
+          <button type="button" class="nav__btn js-modal" data-modal="#modal_2">
+            Buy now
+            <svg class="nav__icon" width="12" height="12">
+              <use href="./images/symbol-defs.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+          <div id="modal_2" class="modal-window">
+            <button class="modal-close" type="button">
+              <svg width="20" height="20">
+                <use href="./images/symbol-defs.svg#icon-close"></use>
+              </svg>
+            </button>
+          </div>
+      </div>
+      <div class="modal-window__backdrop hidden" id="modal-backdrop"></div>
+    </div>
+  </header>

@@ -1,0 +1,49 @@
+
+.modal-window{
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%) scale(.9);
+  width: 280px;
+  height: 991px;
+  background-color:$main-color;
+  border-radius: 10px;
+  border: 2px solid $background-color-btn;
+  transition: $animation;
+  visibility: hidden;
+  opacity: 1;
+  overflow-y: scroll;
+  
+  &.show{
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  &__backdrop{
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000, .6);
+  }
+}
+.hidden{
+  opacity: 0;
+  display: none;
+}
+  
+  
+// @media screen and (min-width: 480px) {
+//   .modal-window {
+//     position: fixed;
+//     width: 450px;
+//     height: 609px;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%) scale(1);
+//   }
+// }

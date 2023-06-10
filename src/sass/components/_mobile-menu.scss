@@ -1,0 +1,136 @@
+.mobile-menu-btn {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  padding: 0;
+  background-color: $section-background-color;
+}
+
+.mobile-menu-btn__icon {
+  fill: $main-color;
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  z-index: 999;
+  overflow: auto;
+  visibility: hidden;
+  pointer-events: none;
+  background-color: $section-background-color;
+  transform: translateX(100%);
+  transition: $animation;
+}
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+.mobile-menu__btn-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  border: 0;
+  padding: 0;
+  fill: $main-color;
+  background-color: $section-background-color;
+}
+.mobile-menu__container {
+  position: relative;
+  padding-top: 12px;
+  padding-bottom: 64px;
+}
+.mobile-menu__nav {
+  margin-bottom: 51px;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.nav__item {
+  margin-bottom: 32px;
+  &:last-child {
+    margin-bottom: 110px;
+  }
+}
+.nav__link {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.21;
+  color: $main-color;
+
+  &:hover,
+  &:focus {
+    color: $secondary-color;
+  }
+}
+.nav__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 152px;
+  height: 42px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21px;
+  border: 0;
+  border-radius: 10px;
+  color: $text-color-btn;
+  background-color: $background-color-btn;
+}
+.nav__icon {
+  margin-left: 4px;
+  color: currentColor;
+}
+
+@media screen and (max-width: 767px) {
+.btn-buy{
+  display: none;
+}
+}
+
+@media screen and (min-width: 768px) {
+  .nav__btn {
+    display: none;
+  }
+  .nav__link {
+    font-size: 48px;
+    line-height: 1.22;
+  }
+  .mobile-menu-btn {
+    position: absolute;
+    top: 29px;
+    right: 216px;
+  }
+  .btn-buy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 152px;
+    height: 42px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.21px;
+    border: 0;
+    border-radius: 10px;
+    color: $text-color-btn;
+    background-color: $background-color-btn;
+
+    &__icon{
+      margin-left: 4px;
+      color: currentColor;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+}

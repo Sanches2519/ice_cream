@@ -1,2 +1,11 @@
-@import './common';
-@import './example';
+@import "./utils/variables";
+@import "./utils/visually-hidden";
+@import "./base/general";
+@import "./base/container";
+@import "./base/section";
+@import "./layout/page-header";
+@import "./components/logo-page-header";
+@import "./components/modal-by-now";
+@import "./components/mobile-menu";
+@import "./components/page-header-nav";
+@import "./layout/hero";

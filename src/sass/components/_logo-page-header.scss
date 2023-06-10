@@ -1,0 +1,40 @@
+.logo__icon {
+  fill: $logo;
+}
+.logo__link {
+  display: inline-block;
+  height: 100%;
+  transition: $animation;
+}
+.logo__link--nav {
+  display: inline;
+  
+}
+@media screen and (max-width: 767px) {
+  .logo__link--nav {
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .logo__link {
+    display: block;
+  }
+}
+@media screen and (min-width: 480px) {
+  .logo__icon {
+    width: 48px;
+    height: 44px;
+  }
+}
+@media screen and (min-width: 768px) {
+  
+  .logo__link--nav{
+    padding-left: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo__icon {
+    width: 60px;
+    height: 65px;
+  }
+}

@@ -1,0 +1,34 @@
+.navigation{
+    display: flex;
+}
+.header-nav {
+  display: flex;
+  margin-right: 205px;
+}
+.header-nav__list {
+  display: flex;
+  align-items: center;
+}
+.header-nav__item {
+  margin-right: 28px;
+}
+.header-nav__item:last-child {
+  margin-right: 0;
+}
+.header-nav__link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  color: $main-color;
+  transition: $animation;
+
+  &:hover,&:focus{
+    color: $background-color-btn;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+    .header-nav{
+        display: none;
+    }
+}
