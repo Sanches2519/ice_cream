@@ -4,9 +4,9 @@
   z-index: 100;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -80%) scale(0.9);
-  min-width: 280px;
-  min-height: 991px;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 280px;
+  height: 991px;
   background-color: $main-color;
   border-radius: 10px;
   border: 2px solid $background-color-btn;
@@ -48,10 +48,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
   font-family: $font-family;
   font-size: 16px;
   line-height: 1.5;
   color: $secondary-color;
+}
+.modal-window__list {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.modal-window__img{
+  position: absolute;
+  z-index: 1;
+}
+.ellipse {
+  position: relative;
+  top: 7px;
+  width: 132px;
+  height: 132px;
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+  border-radius: 100%;
 }
 
 // @media screen and (min-width: 480px) {
