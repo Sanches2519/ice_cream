@@ -23,6 +23,7 @@
   &__backdrop {
     position: fixed;
     pointer-events: none;
+    overflow-y: scroll;
     top: 0;
     left: 0;
     width: 100%;
@@ -57,25 +58,73 @@
 .modal-window__list {
   position: relative;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
-.modal-window__img{
+.modal-window__item {
+  position: relative;
+  height: 199px;
+  margin-bottom: 20px;
+}
+.modal-window__img {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
 }
 .ellipse {
   position: relative;
   top: 7px;
   width: 132px;
   height: 132px;
-  background: linear-gradient(
-      0deg,
-      rgba(156, 190, 143, 0.7),
-      rgba(156, 190, 143, 0.7)
-    ),
-    #d9d9d9;
-  box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
   border-radius: 100%;
+  z-index: 1;
+
+  &__ice-cream {
+    background: linear-gradient(
+        0deg,
+        rgba(156, 190, 143, 0.7),
+        rgba(156, 190, 143, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+  }
+  &__coffee {
+    background: linear-gradient(
+        0deg,
+        rgba(248, 210, 78, 0.7),
+        rgba(248, 210, 78, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+  }
+}
+
+.card {
+  position: absolute;
+  width: 132px;
+  height: 136px;
+  border-radius: 15px;
+
+  &__ice-cream {
+    top: 63px;
+    border: 2px solid $border-cards;
+    filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+  }
+  &__ice-coffee {
+    top: 64px;
+    background: #efd478;
+    border: 2px solid #efd478;
+    box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+  }
+}
+.modal-window__text {
+  text-align: center;
+  padding-top: 96px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: $secondary-color;
 }
 
 // @media screen and (min-width: 480px) {

@@ -87,35 +87,64 @@
           </svg>
         </button>
         <h2 class="modal-window__title">Byu now</h2>
-        <ul class="modal-window__list">
-          <li>
+        <ul class="modal-window__list list">
+          <li class="modal-window__item">
             <picture>
               <source
                 srcset="
-                  ./images/ice-creams-mob-132.jpg    1x,
-                  ./images/ice-creams-mob-264@2x.jpg 2x
+                  ./images/cream-ice-132.webp    1x,
+                  ./images/cream-ice-132@2x.webp 2x
                 "
-                media="(min-width 320px)"
+                media="(min-width: 320px)"
+                type="image/webp"
               />
               <source
                 srcset="
-                  ./images/ice-creams-mob-132.webp    1x,
-                  ./images/ice-creams-mob-264@2x.webp 2x
+                  ./images/cream-ice-132.jpg    1x,
+                  ./images/cream-ice-132@2x.jpg 2x
                 "
-                media="(min-width 320px)"
-                type="image/webp"
+                media="(min-width: 320px)"
               />
               <img
                 class="modal-window__img image"
-                src="./images/ice-creams-mob-132.jpg"
+                src="./images/cream-ice-132.jpg"
                 alt="Ice Creams"
               />
             </picture>
-            <div class="ellipse"></div>
+            <div class="ellipse ellipse__ice-cream"></div>
+            <div class="card card__ice-cream">
+              <p class="modal-window__text">ICE CREAM</p>
+            </div>
           </li>
-
-          <li></li>
-          <li></li>
+          <li class="modal-window__item">
+            <picture>
+              <source
+                srcset="
+                  ./images/ice-coffee-132.webp    1x,
+                  ./images/ice-coffee-132@2x.webp 2x
+                "
+                media="(min-width: 132px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/ice-coffee-132.jpg    1x,
+                  ./images/ice-coffee-132@2x.jpg 2x
+                "
+                media="(min-width: 132px)"
+              />
+              <img
+                class="modal-window__img image"
+                src="./images/ice-coffee-132.jpg"
+                alt="ICE COFFEE"
+              />
+            </picture>
+            <div class="ellipse ellipse__coffee"></div>
+            <div class="card card__ice-coffee">
+              <p class="modal-window__text">ICE COFFEE</p>
+            </div>
+          </li>
+          <li class="modal-window__item"></li>
         </ul>
       </div>
     </div>
