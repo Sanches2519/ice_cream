@@ -2,11 +2,11 @@
   position: fixed;
   padding: 28px 28px;
   z-index: 100;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.9);
-  width: 280px;
-  height: 991px;
+  max-width: 280px;
+  max-height: 991px;
   background-color: $main-color;
   border-radius: 10px;
   border: 2px solid $background-color-btn;
@@ -67,6 +67,9 @@
   height: 199px;
   margin-bottom: 20px;
 }
+.modal-window__item:last-child {
+  margin-bottom: 31px;
+}
 .modal-window__img {
   position: absolute;
   z-index: 2;
@@ -97,6 +100,15 @@
       #d9d9d9;
     box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
   }
+  &__milkshake {
+    background: linear-gradient(
+        0deg,
+        rgba(213, 117, 63, 0.7),
+        rgba(213, 117, 63, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+  }
 }
 
 .card {
@@ -111,10 +123,15 @@
     filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
   }
   &__ice-coffee {
-    top: 64px;
+    top: 62px;
     background: #efd478;
     border: 2px solid #efd478;
     box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+  }
+  &__milkshake {
+    top: 64px;
+    border: 2px solid #d6936d;
+    filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
   }
 }
 .modal-window__text {
@@ -126,7 +143,54 @@
   text-transform: uppercase;
   color: $secondary-color;
 }
+.modal-form {
+  display: block;
+}
+.modal-form__field {
+  text-align: left;
+  margin-bottom: 12px;
 
+  &:last-child {
+    margin-bottom: 26px;
+  }
+}
+.modal-form__input {
+  width: 100%;
+  height: 32px;
+  padding: 0 0 0 12px;
+  cursor: pointer;
+  background-color: $background-input;
+  border: 1px solid $border-input;
+  border-radius: 10px;
+
+  &--comment {
+    display: block;
+    resize: none;
+    height: 65px;
+    padding-top: 8px;
+  }
+  &::placeholder {
+    font-size: 12px;
+    line-height: 140%;
+    color: $secondary-color;
+  }
+}
+.modal-form__button{
+  display: flex;
+  justify-content: center;
+}
+.modal-form__submit {
+  width: 114px;
+  height: 42px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+  color: $secondary-color;
+  background-color: $background-color-btn;
+  border: 0;
+  border-radius: 10px;
+}
 // @media screen and (min-width: 480px) {
 //   .modal-window {
 //     position: fixed;

@@ -144,8 +144,69 @@
               <p class="modal-window__text">ICE COFFEE</p>
             </div>
           </li>
-          <li class="modal-window__item"></li>
+          <li class="modal-window__item">
+            <picture>
+              <source
+                srcset="
+                  ./images/milkshake-132.webp    1x,
+                  ./images/milkshake-132@2x.webp 2x
+                "
+                media="(min-width: 320px)"
+                type="image/webp" />
+              <source
+                srcset="
+                  ./images/milkshake-132.jpg    1x,
+                  ./images/milkshake-132@2x.jpg 2x
+                "
+                media="(min-width: 320px)" />
+              <img
+                class="modal-window__img image"
+                src="./images/milkshake-132.jpg"
+                alt="MILKSHAKE"
+            /></picture>
+            <div class="ellipse ellipse__milkshake"></div>
+            <div class="card card__milkshake">
+              <p class="modal-window__text">MILKSHAKE</p>
+            </div>
+          </li>
         </ul>
+        <form class="modal-form">
+          <div class="modal-form__field">
+            <label for="user_name">
+              <input
+                class="modal-form__input"
+                type="text"
+                name="user"
+                id="user_name"
+                placeholder="Name"
+              />
+            </label>
+          </div>
+          <div class="modal-form__field">
+            <label for="phone_number">
+              <input
+                class="modal-form__input"
+                type="tel"
+                name="tel"
+                id="phone_number"
+                placeholder="Phone"
+              />
+            </label>
+          </div>
+          <div class="modal-form__field">
+            <label for="comment">
+              <textarea
+                class="modal-form__input modal-form__input--comment"
+                name="comment"
+                id="comment"
+                placeholder="Comment"
+              ></textarea>
+            </label>
+          </div>
+          <div class="modal-form__button">
+            <button class="modal-form__submit" type="submit">Submit</button>
+          </div>
+        </form>
       </div>
     </div>
     <div class="modal-window__backdrop hidden" id="modal-backdrop"></div>

@@ -8,13 +8,13 @@
   padding: 0;
   clip: rect(0 0 0 0);
   -webkit-clip-path: in(50%);
-          clip-path: in(50%);
+  clip-path: in(50%);
   margin: -1px;
 }
 
 body {
   color: #fcfcfc;
-  font-family: "Monserrat", sans-serif;
+  font-family: 'Monserrat', sans-serif;
   letter-spacing: 0.04em;
 }
 
@@ -77,7 +77,7 @@ ul {
   }
 }
 
-.section:nth-child(2n+1) {
+.section:nth-child(2n + 1) {
   background-color: #84a178;
 }
 
@@ -164,7 +164,7 @@ ul {
   min-height: 991px;
   background-color: #fcfcfc;
   border-radius: 10px;
-  border: 2px solid #F8D24E;
+  border: 2px solid #f8d24e;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   visibility: hidden;
   opacity: 0;
@@ -204,7 +204,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Seymour One", sans-serif;
+  font-family: 'Seymour One', sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #131313;
@@ -286,7 +286,8 @@ ul {
   line-height: 1.21;
   color: #fcfcfc;
 }
-.nav__link:hover, .nav__link:focus {
+.nav__link:hover,
+.nav__link:focus {
   color: #131313;
 }
 
@@ -302,7 +303,7 @@ ul {
   border: 0;
   border-radius: 10px;
   color: #000000;
-  background-color: #F8D24E;
+  background-color: #f8d24e;
 }
 
 .nav__icon {
@@ -340,7 +341,7 @@ ul {
     border: 0;
     border-radius: 10px;
     color: #000000;
-    background-color: #F8D24E;
+    background-color: #f8d24e;
   }
   .btn-buy__icon {
     margin-left: 4px;
@@ -381,8 +382,9 @@ ul {
   color: #fcfcfc;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-nav__link:hover, .header-nav__link:focus {
-  color: #F8D24E;
+.header-nav__link:hover,
+.header-nav__link:focus {
+  color: #f8d24e;
 }
 
 @media screen and (max-width: 1199px) {
@@ -409,7 +411,7 @@ ul {
   line-height: 1.25;
   color: #000000;
   background-color: #84a178;
-  border: 2px solid #F8D24E;
+  border: 2px solid #f8d24e;
   border-radius: 8px;
 }
 
@@ -421,7 +423,7 @@ ul {
   width: 100px;
   height: 24px;
   padding: 0;
-  color: #F8D24E;
+  color: #f8d24e;
   text-decoration: underline;
   border: 0;
 }
@@ -429,7 +431,7 @@ ul {
 .street-food__title {
   display: flex;
   flex-direction: column;
-  font-family: "Seymour One", sans-serif;
+  font-family: 'Seymour One', sans-serif;
   margin-bottom: 32px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -562,7 +564,7 @@ ul {
     width: 165px;
     height: 68px;
     margin-bottom: 29px;
-    font-family: "DM Sans", sans-serif;
+    font-family: 'DM Sans', sans-serif;
     letter-spacing: 0;
     font-size: 12px;
     line-height: 140%;
@@ -620,4 +622,4 @@ ul {
     height: 80px;
     font-size: 14px;
   }
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */
