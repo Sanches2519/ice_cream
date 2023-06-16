@@ -2,7 +2,7 @@
   position: fixed;
   padding: 28px 28px;
   z-index: 100;
-  top: 80%;
+  // top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.9);
   max-width: 280px;
@@ -12,6 +12,7 @@
   border: 2px solid $background-color-btn;
   transition: $animation;
   visibility: hidden;
+  overflow: scroll;
   opacity: 0;
 
   &.show {
@@ -23,7 +24,6 @@
   &__backdrop {
     position: fixed;
     pointer-events: none;
-    overflow-y: scroll;
     top: 0;
     left: 0;
     width: 100%;
