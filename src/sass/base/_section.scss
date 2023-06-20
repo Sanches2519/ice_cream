@@ -1,3 +1,7 @@
 .section:nth-child(2n + 1) {
     background-color: $section-background-color;
 }
+.section:nth-child(2n){
+  background-image: url("../images/backgroud-mobile-885.jpg"); 
+  background-color: $main-color; 
+}

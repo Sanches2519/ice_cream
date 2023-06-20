@@ -91,9 +91,9 @@
 }
 
 @media screen and (max-width: 767px) {
-.btn-buy{
-  display: none;
-}
+  .btn-buy {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -109,10 +109,11 @@
     top: 29px;
     right: 216px;
   }
-  .btn-buy{
+  .btn-buy {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     width: 152px;
     height: 42px;
     font-weight: 600;
@@ -123,7 +124,7 @@
     color: $text-color-btn;
     background-color: $background-color-btn;
 
-    &__icon{
+    &__icon {
       margin-left: 4px;
       color: currentColor;
     }

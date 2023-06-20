@@ -5,14 +5,13 @@
   // top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.9);
-  max-width: 280px;
-  max-height: 991px;
+  width: 280px;
+  height: 991px;
   background-color: $main-color;
   border-radius: 10px;
   border: 2px solid $background-color-btn;
   transition: $animation;
   visibility: hidden;
-  overflow: scroll;
   opacity: 0;
 
   &.show {
@@ -40,6 +39,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
   top: 12px;
   right: 12px;
   background-color: $main-color;
@@ -151,7 +151,7 @@
   margin-bottom: 12px;
 
   &:last-child {
-    margin-bottom: 26px;
+    margin-bottom: 0;
   }
 }
 .modal-form__input {
@@ -175,7 +175,7 @@
     color: $secondary-color;
   }
 }
-.modal-form__button{
+.modal-form__button {
   display: flex;
   justify-content: center;
 }
@@ -191,13 +191,59 @@
   border: 0;
   border-radius: 10px;
 }
-// @media screen and (min-width: 480px) {
-//   .modal-window {
-//     position: fixed;
-//     width: 450px;
-//     height: 609px;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%) scale(1);
-//   }
-// }
+@media screen and (min-width: 768px) {
+  .modal-close {
+    width: 24px;
+    height: 24px;
+  }
+  .modal-window__title {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 40px;
+  }
+  .modal-window {
+    position: fixed;
+    width: 568px;
+    height: 644px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .modal-window__list {
+    flex-direction: row;
+    margin-bottom: 40px;
+  }
+  .modal-window__item {
+    margin-bottom: 0;
+    margin-right: 32px;
+
+    &:last-child {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+  .modal-form__field {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 32px;
+    }
+  }
+  .modal-form__input {
+    height: 42px;
+    padding: 0 0 0 16px;
+
+    &--comment {
+      height: 84px;
+      padding-top: 11px;
+    }
+    &::placeholder {
+      font-size: 14px;
+    }
+  }
+  .modal-form__submit {
+    width: 121px;
+    font-size: 14px;
+    line-height: 1.21;
+  }
+}
