@@ -9,7 +9,7 @@
 }
 @media screen and (max-width: 767px) {
   .section:nth-child(even) {
-    height: 1242px;
+    height: 100%;
     background-image: url('../images/backgroud-mobile-885.jpg');
   }
   @media (min-device-pixel-ratio: 2),
@@ -36,7 +36,7 @@
 }
 @media screen and (min-width: 1200px) {
   .section:nth-child(even){
-    height: 1300px;
+    height: 100%;
     background-image: url("../images/backgroud-desktop-1300.jpg");
   }
   @media (min-device-pixel-ratio: 2),

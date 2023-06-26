@@ -19,15 +19,22 @@
   text-transform: uppercase;
   color: $secondary-color;
 }
+.variety {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 168px;
+}
 .variety__item {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 126px 60px 16px;
   width: 100%;
-  min-height: 428px;
+  min-height: 420px;
+  padding: 123px 40px 16px;
   border-radius: 24px;
 }
 .variety__item--cream {
@@ -36,7 +43,7 @@
   &::before {
     content: '';
     position: absolute;
-    top: -94px;
+    top: -97px;
     width: 200px;
     height: 200px;
     border-radius: 200px;
@@ -51,11 +58,11 @@
   }
   &::after {
     content: '';
+    position: absolute;
+    display: inline-block;
     width: 200px;
     height: 200px;
-    display: inline-block;
-    position: absolute;
-    top: -105px;
+    top: -108px;
     background-image: url('../images/ice-cream-200.png');
     background-position: center;
     background-size: cover;
@@ -69,6 +76,83 @@
     background-image: url('../images/ice-cream-200@2x.png');
   }
 }
+.variety__item--coffee {
+  background-color: #efd478;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -97px;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    background-color: #d9d9d9;
+    background-image: linear-gradient(
+        rgba(248, 210, 78, 0.7),
+        rgba(248, 210, 78, 0.7)
+      ),
+      none;
+    box-shadow: 0px 5.403973579406738px 20.26490020751953px 0px
+      rgba(153, 114, 23, 0.25);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    top: -108px;
+    background-image: url('../images/ice-coffee-200.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .variety__item--coffee::after {
+    background-image: url('../images/ice-coffee-200@2x.png');
+  }
+}
+.variety__item--milkshakes {
+  background-color: #d6936d;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -97px;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    background-color: #d9d9d9;
+    background-image: linear-gradient(
+        rgba(213, 117, 63, 0.7),
+        rgba(213, 117, 63, 0.7)
+      ),
+      none;
+    box-shadow: 0px 5.413332939147949px 20.299999237060547px 0px
+      rgba(0, 0, 0, 0.25);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    top: -108px;
+    background-image: url('../images/milkshakes-200.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .variety__item--coffee::after {
+    background-image: url('../images/milkshakes-200@2x.png');
+  }
+}
 .variety__title {
   text-align: center;
   margin-bottom: 40px;
@@ -80,13 +164,56 @@
 }
 .variety__text {
   text-align: center;
-  margin-bottom: 106px;
+  margin-bottom: 101px;
   font-size: 14px;
   line-height: 176%;
   letter-spacing: 0.56px;
   color: $secondary-color;
+
+  &--coffee{
+    margin-bottom: 53px;
+  }
+  &--milkshakes{
+    margin-bottom: 72px;
+  }
+}
+.variety__button {
+  background-color: #aec6a5;
+  border: 0;
+  &--coffee {
+    background-color: #efd478;
+  }
+  &--milkshakes {
+    background-color: #d6936d;
+  }
+}
+.variety__image {
+  fill: $secondary-color;
+  background-color: #aec6a5;
+  &--coffee {
+    background-color: #efd478;
+  }
+  &--milkshakes {
+    background-color: #d6936d;
+  }
 }
 
+@media screen and (min-width:480px) {
+  .variety__item{
+    width: 320px;
+    min-height: 428px;
+    padding: 123px 60px 16px;
+  }
+  .variety__text {
+    margin-bottom: 106px;
+    &--coffee{
+      margin-bottom: 61px;
+    }
+    &--milkshakes{
+      margin-bottom: 80px;
+    }
+  }
+}
 @media screen and (min-width: 780px) {
   .products__text {
     font-size: 22px;
