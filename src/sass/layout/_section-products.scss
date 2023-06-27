@@ -170,10 +170,10 @@
   letter-spacing: 0.56px;
   color: $secondary-color;
 
-  &--coffee{
+  &--coffee {
     margin-bottom: 53px;
   }
-  &--milkshakes{
+  &--milkshakes {
     margin-bottom: 72px;
   }
 }
@@ -198,18 +198,18 @@
   }
 }
 
-@media screen and (min-width:480px) {
-  .variety__item{
-    width: 320px;
+@media screen and (min-width: 480px) {
+  .variety__item {
+    max-width: 320px;
     min-height: 428px;
     padding: 123px 60px 16px;
   }
   .variety__text {
     margin-bottom: 106px;
-    &--coffee{
+    &--coffee {
       margin-bottom: 61px;
     }
-    &--milkshakes{
+    &--milkshakes {
       margin-bottom: 80px;
     }
   }
@@ -219,17 +219,118 @@
     font-size: 22px;
   }
   .products__title {
+    margin-bottom: 200px;
     font-size: 34px;
     letter-spacing: 1.36px;
   }
+  .variety {
+    gap: 16px;
+  }
+  .variety__item {
+    max-width: 224px;
+    padding: 108px 12px 12px;
+  }
+  .variety__title {
+    font-size: 22px;
+    letter-spacing: 0.88px;
+  }
+  .variety__text {
+    margin-bottom: 81px;
+    &--coffee {
+      margin-bottom: 50px;
+    }
+    &--milkshakes {
+      margin-bottom: 75px;
+    }
+  }
 }
+
 @media screen and (min-width: 1200px) {
   .products__text {
     font-size: 30px;
     letter-spacing: 1.2px;
   }
   .products__title {
+    margin-bottom: 303px;
     font-size: 36px;
     letter-spacing: 2.16px;
+  }
+  .variety {
+    gap: 29px;
+  }
+  .variety__item {
+    max-width: 370px;
+    min-height: 536px;
+    padding: 165px 34px 60px;
+  }
+
+  .variety__item--cream {
+    &::before {
+      width: 302px;
+      height: 302px;
+      top: -167px;
+    }
+    &::after {
+      width: 302px;
+      height: 302px;
+      top: -187px;
+      background-image: url('../images/ice-cream-300.png');
+    }
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .variety__item--cream::after {
+      background-image: url('../images/ice-cream-300@2x.png');
+    }
+  }
+  .variety__item--coffee {
+    &::before {
+      width: 302px;
+      height: 302px;
+      top: -167px;
+    }
+    &::after {
+      width: 302px;
+      height: 302px;
+      top: -187px;
+      background-image: url('../images/ice-coffee-302.png');
+    }
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .variety__item--coffee::after {
+      background-image: url('../images/ice-coffee-302@2x.png');
+    }
+  }
+  .variety__item--milkshakes {
+    &::before {
+      width: 302px;
+      height: 302px;
+      top: -167px;
+    }
+    &::after {
+      width: 302px;
+      height: 302px;
+      top: -187px;
+      background-image: url('../images/milkshakes-302.png');
+    }
+  }
+  .variety__title {
+    margin-bottom: 66px;
+    font-size: 30px;
+    letter-spacing: 1.2px;
+  }
+  .variety__text {
+    font-size: 16px;
+    letter-spacing: 0.64px;
+    margin-bottom: 50px;
+    &--coffee {
+      margin-bottom: 50px;
+    }
+    &--milkshakes {
+      margin-bottom: 50px;
+    }
   }
 }

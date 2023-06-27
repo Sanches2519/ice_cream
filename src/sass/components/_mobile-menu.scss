@@ -25,6 +25,7 @@
   transition: $animation;
 }
 .mobile-menu.is-open {
+  position: fixed;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
