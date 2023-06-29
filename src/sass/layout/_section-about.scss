@@ -1,0 +1,45 @@
+.about {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+.about__text-label {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: center;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.about__title-label {
+  text-align: center;
+  font-size: 30px;
+  font-family: $font-family;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+.about__content{
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .about__text-label{
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 0.88px;
+  }
+  .about__title-label{
+    font-size: 34px;
+    letter-spacing: 2.04px;
+  }
+}
+@media screen and (min-width: 1200px) {
+    .about__text-label{
+        font-size: 30px;
+        letter-spacing: 1.2px;
+      }
+    .about__title-label{
+        font-size: 36px;
+        letter-spacing: 2.16px;
+      }
+}

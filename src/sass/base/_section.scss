@@ -1,7 +1,8 @@
 .section:nth-child(odd) {
   background-color: $section-background-color;
 }
-.section:nth-child(even){
+.section:nth-child(even) {
+  height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -9,7 +10,6 @@
 }
 @media screen and (max-width: 767px) {
   .section:nth-child(even) {
-    height: 100%;
     background-image: url('../images/backgroud-mobile-885.jpg');
   }
   @media (min-device-pixel-ratio: 2),
@@ -22,8 +22,6 @@
 }
 @media screen and (min-width: 768px) {
   .section:nth-child(even) {
-    width: 100%;
-    height: 100%;
     background-image: url('../images/background-tablet-983.jpg');
   }
   @media (min-device-pixel-ratio: 2),
@@ -35,15 +33,14 @@
   }
 }
 @media screen and (min-width: 1200px) {
-  .section:nth-child(even){
-    height: 100%;
-    background-image: url("../images/backgroud-desktop-1300.jpg");
+  .section:nth-child(even) {
+    background-image: url('../images/backgroud-desktop-1300.jpg');
   }
   @media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx){
-    .section:nth-child(even){
-      background-image: url("../images/backgroud-desktop-1300@2x.jpg");
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .section:nth-child(even) {
+      background-image: url('../images/backgroud-desktop-1300@2x.jpg');
     }
   }
 }
