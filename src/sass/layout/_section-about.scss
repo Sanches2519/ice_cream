@@ -12,34 +12,98 @@
 }
 .about__title-label {
   text-align: center;
+  margin-bottom: 54px;
   font-size: 30px;
   font-family: $font-family;
   letter-spacing: 1.2px;
   text-transform: uppercase;
 }
-.about__content{
-    display: flex;
-    justify-content: center;
+.about__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
 }
-
+.about__images {
+  border-radius: 140px;
+  box-shadow: 0 -22px $background-color-btn;
+}
+.about__content--made{
+  padding: 0 30px;
+}
+.about__content--text {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.about__paragraph {
+  text-align: center;
+  font-size: 12px;
+  line-height: 176%;
+  letter-spacing: 0.48px;
+}
+@media screen and (max-width: 767px) {
+  .about__title-label {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 200px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .about__content--made{
+    padding: 0;
+    max-width: 50%;
+  }
+}
 @media screen and (min-width: 768px) {
-  .about__text-label{
+  .about__text-label {
     font-size: 22px;
     font-weight: 800;
     letter-spacing: 0.88px;
   }
-  .about__title-label{
+  .about__title-label {
+    margin-bottom: 98px;
     font-size: 34px;
     letter-spacing: 2.04px;
   }
+  .about__images {
+    border-radius: 165px;
+    box-shadow: 0 -26px $background-color-btn;
+  }
+  .about__content {
+    flex-wrap: nowrap;
+    gap: 38px;
+  }
+  .about__content--images{
+    max-width: 50%;
+  }
+  .about__content--text {
+    gap: 8px;
+  }
+  .about__paragraph{
+    text-align: left;
+  }
 }
 @media screen and (min-width: 1200px) {
-    .about__text-label{
-        font-size: 30px;
-        letter-spacing: 1.2px;
-      }
-    .about__title-label{
-        font-size: 36px;
-        letter-spacing: 2.16px;
-      }
+  .about__text-label {
+    font-size: 30px;
+    letter-spacing: 1.2px;
+  }
+  .about__title-label {
+    margin-bottom: 121px;
+    font-size: 36px;
+    letter-spacing: 2.16px;
+  }
+  .about__images {
+    border-radius: 250px;
+    box-shadow: 0 -39px $background-color-btn;
+  }
+  .about__content {
+    gap: 109px;
+  }
+  .about__content--text {
+    font-size: 14px;
+    line-height: 194%;
+    letter-spacing: 0.56px;
+  }
 }
