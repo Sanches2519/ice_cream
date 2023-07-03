@@ -28,7 +28,12 @@
   border-radius: 140px;
   box-shadow: 0 -22px $background-color-btn;
 }
-.about__content--made{
+.about__content--made {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
   padding: 0 30px;
 }
 .about__content--text {
@@ -38,9 +43,31 @@
 }
 .about__paragraph {
   text-align: center;
+  letter-spacing: 0.48px;
   font-size: 12px;
+}
+.about__paragraph:first-child {
   line-height: 176%;
   letter-spacing: 0.48px;
+}
+.about__paragraph:not(:first-child) {
+  font-size: 12px;
+  line-height: 162%;
+}
+.about__content--button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 164px;
+  height: 42px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  border: 0;
+  border-radius: 10px;
+  color: $text-color-btn;
+  background-color: $background-color-btn;
 }
 @media screen and (max-width: 767px) {
   .about__title-label {
@@ -50,9 +77,9 @@
   }
 }
 @media screen and (min-width: 480px) {
-  .about__content--made{
+  .about__content--made {
     padding: 0;
-    max-width: 50%;
+    flex-basis: 50%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -72,16 +99,24 @@
   }
   .about__content {
     flex-wrap: nowrap;
+    align-items: center;
     gap: 38px;
   }
-  .about__content--images{
-    max-width: 50%;
+  .about__content--made {
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .about__content--images {
+    flex-basis: 50%;
   }
   .about__content--text {
     gap: 8px;
   }
-  .about__paragraph{
+  .about__paragraph {
     text-align: left;
+  }
+  .about__paragraph:last-child {
+    line-height: 194%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -99,9 +134,29 @@
     box-shadow: 0 -39px $background-color-btn;
   }
   .about__content {
+    justify-content: flex-start;
     gap: 109px;
   }
-  .about__content--text {
+  .about__content--made {
+    flex-basis: 463px;
+    gap: 54px;
+  }
+  .about__content--images {
+    flex-basis: 490px;
+  }
+  .about__paragraph {
+    text-align: left;
+  }
+  .about__paragraph:first-child {
+    font-size: 16px;
+    letter-spacing: 0.64px;
+  }
+  .about__paragraph:not(:first-child) {
+    font-size: 14px;
+    line-height: 194%;
+    letter-spacing: 0.56px;
+  }
+  .about__paragraph:last-child {
     font-size: 14px;
     line-height: 194%;
     letter-spacing: 0.56px;
