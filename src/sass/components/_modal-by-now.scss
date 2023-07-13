@@ -1,49 +1,46 @@
-.modal-window {
+.backdrop {
   position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: rgba(#000, 0.6);
+  transition: opacity $animation;
+}
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-window {
+  position: relative;
+  margin: 0 auto;
   padding: 28px 28px;
-  z-index: 100;
-  // top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.9);
   width: 280px;
-  height: 991px;
   background-color: $main-color;
   border-radius: 10px;
   border: 2px solid $background-color-btn;
-  transition: $animation;
-  visibility: hidden;
-  opacity: 0;
-
-  &.show {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-    visibility: visible;
-  }
-
-  &__backdrop {
-    position: fixed;
-    pointer-events: none;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(#000, 0.6);
-  }
+  transition: transform $animation, opacity $animation;
+  opacity: 1;
 }
-.hidden {
+.backdrop.is-hidden.modal-window{
+  transform: translate(-50%, -50%) scale(0.5);
   opacity: 0;
-  display: none;
 }
 .modal-close {
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  margin: 0;
   padding: 0;
   top: 12px;
   right: 12px;
   background-color: $main-color;
   border: $main-color;
+  transition: opacity $animation;
 }
 .modal-window__title {
   display: flex;

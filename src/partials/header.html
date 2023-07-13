@@ -24,185 +24,16 @@
           </li>
         </ul>
       </div>
-      <button type="button" class="btn-buy js-modal" data-modal="#modal_1">
+      <button type="button" class="btn-buy" data-modal-window>
         Buy now
         <svg class="btn-buy__icon" width="12" height="12">
           <use href="./images/symbol-defs.svg#icon-arrow-right"></use>
         </svg>
       </button>
     </div>
-    <div id="modal_1" class="modal-window">
-      <button class="modal-close" type="button">
-        <svg width="20" height="20">
-          <use href="./images/symbol-defs.svg#icon-close"></use>
-        </svg>
-      </button>
-      <h2 class="modal-window__title">Byu now</h2>
-      <ul class="modal-window__list list">
-        <li class="modal-window__item">
-          <picture>
-            <source
-              srcset="
-                ./images/cream-ice-132.webp    1x,
-                ./images/cream-ice-132@2x.webp 2x
-              "
-              media="(min-width: 320px)"
-              type="image/webp"
-            />
-            <source
-              srcset="
-                ./images/cream-ice-132.jpg    1x,
-                ./images/cream-ice-132@2x.jpg 2x
-              "
-              media="(min-width: 320px)"
-            />
-            <img
-              class="modal-window__img image"
-              src="./images/cream-ice-132.jpg"
-              alt="Ice Creams"
-            />
-          </picture>
-          <div class="ellipse ellipse__ice-cream"></div>
-          <div class="card card__ice-cream">
-            <h2 class="modal-window__text">ICE CREAM</h2>
-          </div>
-        </li>
-        <li class="modal-window__item">
-          <picture>
-            <source
-              srcset="
-                ./images/ice-coffee-132.webp    1x,
-                ./images/ice-coffee-132@2x.webp 2x
-              "
-              media="(min-width: 132px)"
-              type="image/webp"
-            />
-            <source
-              srcset="
-                ./images/ice-coffee-132.jpg    1x,
-                ./images/ice-coffee-132@2x.jpg 2x
-              "
-              media="(min-width: 132px)"
-            />
-            <img
-              class="modal-window__img image"
-              src="./images/ice-coffee-132.jpg"
-              alt="ICE COFFEE"
-            />
-          </picture>
-          <div class="ellipse ellipse__coffee"></div>
-          <div class="card card__ice-coffee">
-            <h2 class="modal-window__text">ICE COFFEE</h2>
-          </div>
-        </li>
-        <li class="modal-window__item">
-          <picture>
-            <source
-              srcset="
-                ./images/milkshake-132.webp    1x,
-                ./images/milkshake-132@2x.webp 2x
-              "
-              media="(min-width: 320px)"
-              type="image/webp" />
-            <source
-              srcset="
-                ./images/milkshake-132.jpg    1x,
-                ./images/milkshake-132@2x.jpg 2x
-              "
-              media="(min-width: 320px)" />
-            <img
-              class="modal-window__img image"
-              src="./images/milkshake-132.jpg"
-              alt="MILKSHAKE"
-          /></picture>
-          <div class="ellipse ellipse__milkshake"></div>
-          <div class="card card__milkshake">
-            <h2 class="modal-window__text">MILKSHAKE</h2>
-          </div>
-        </li>
-      </ul>
-      <form class="modal-form">
-        <div class="modal-form__field">
-          <label for="user_name">
-            <input
-              class="modal-form__input"
-              type="text"
-              name="user"
-              id="user_name"
-              placeholder="Name"
-            />
-          </label>
-        </div>
-        <div class="modal-form__field">
-          <label for="phone_number">
-            <input
-              class="modal-form__input"
-              type="tel"
-              name="tel"
-              id="phone_number"
-              placeholder="Phone"
-            />
-          </label>
-        </div>
-        <div class="modal-form__field">
-          <label for="comment">
-            <textarea
-              class="modal-form__input modal-form__input--comment"
-              name="comment"
-              id="comment"
-              placeholder="Comment"
-            ></textarea>
-          </label>
-        </div>
-        <div class="modal-form__button">
-          <button class="modal-form__submit" type="submit">Submit</button>
-        </div>
-      </form>
-    </div>
-    <button type="button" class="mobile-menu-btn" data-menu-open>
-      <svg class="mobile-menu-btn__icon" width="32" height="32">
-        <use href="./images/symbol-defs.svg#icon-mobile-img"></use>
-      </svg>
-    </button>
-  </div>
-  <div class="mobile-menu" data-menu>
-    <div class="container mobile-menu__container">
-      <button type="button" class="mobile-menu__btn-close" data-menu-close>
-        <svg class="mobile-menu-btn__icon" width="32" height="32">
-          <use href="./images/symbol-defs.svg#icon-close"></use>
-        </svg>
-      </button>
-      <div class="mobile-menu__nav">
-        <a href="./index.html" class="logo__link--nav link">
-          <svg class="logo__icon" width="40" height="37">
-            <use href="./images/symbol-defs.svg#icon-logo"></use>
-          </svg>
-        </a>
-      </div>
-      <div class="nav">
-        <ul class="nav__list list">
-          <li class="nav__item">
-            <a href="./index.html" class="nav__link link">Home</a>
-          </li>
-          <li class="nav__item">
-            <a href="" class="nav__link link">How it's made</a>
-          </li>
-          <li class="nav__item">
-            <a href="" class="nav__link link">Our products</a>
-          </li>
-          <li class="nav__item">
-            <a href="" class="nav__link link">Contact</a>
-          </li>
-        </ul>
-        <button type="button" class="nav__btn js-modal" data-modal="#modal_2">
-          Buy now
-          <svg class="nav__icon" width="12" height="12">
-            <use href="./images/symbol-defs.svg#icon-arrow-right"></use>
-          </svg>
-        </button>
-      </div>
-      <div id="modal_2" class="modal-window">
-        <button class="modal-close" type="button">
+    <div class="backdrop is-hidden" modal-backdrop>
+      <div class="modal-window">
+        <button class="modal-close" type="button" data-modal-close>
           <svg width="20" height="20">
             <use href="./images/symbol-defs.svg#icon-close"></use>
           </svg>
@@ -234,7 +65,7 @@
             </picture>
             <div class="ellipse ellipse__ice-cream"></div>
             <div class="card card__ice-cream">
-              <h3 class="modal-window__text">ICE CREAM</h3>
+              <h2 class="modal-window__text">ICE CREAM</h2>
             </div>
           </li>
           <li class="modal-window__item">
@@ -262,7 +93,7 @@
             </picture>
             <div class="ellipse ellipse__coffee"></div>
             <div class="card card__ice-coffee">
-              <h3 class="modal-window__text">ICE COFFEE</h3>
+              <h2 class="modal-window__text">ICE COFFEE</h2>
             </div>
           </li>
           <li class="modal-window__item">
@@ -287,7 +118,7 @@
             /></picture>
             <div class="ellipse ellipse__milkshake"></div>
             <div class="card card__milkshake">
-              <h3 class="modal-window__text">MILKSHAKE</h3>
+              <h2 class="modal-window__text">MILKSHAKE</h2>
             </div>
           </li>
         </ul>
@@ -330,6 +161,178 @@
         </form>
       </div>
     </div>
-    <div class="modal-window__backdrop hidden" id="modal-backdrop"></div>
+    <button type="button" class="mobile-menu-btn" data-menu-open>
+      <svg class="mobile-menu-btn__icon" width="32" height="32">
+        <use href="./images/symbol-defs.svg#icon-mobile-img"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu" data-menu>
+    <div class="container mobile-menu__container">
+      <button type="button" class="mobile-menu__btn-close" data-menu-close>
+        <svg class="mobile-menu-btn__icon" width="32" height="32">
+          <use href="./images/symbol-defs.svg#icon-close"></use>
+        </svg>
+      </button>
+      <div class="mobile-menu__nav">
+        <a href="./index.html" class="logo__link--nav link">
+          <svg class="logo__icon" width="40" height="37">
+            <use href="./images/symbol-defs.svg#icon-logo"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="nav">
+        <ul class="nav__list list">
+          <li class="nav__item">
+            <a href="./index.html" class="nav__link link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="" class="nav__link link">How it's made</a>
+          </li>
+          <li class="nav__item">
+            <a href="" class="nav__link link">Our products</a>
+          </li>
+          <li class="nav__item">
+            <a href="" class="nav__link link">Contact</a>
+          </li>
+        </ul>
+        <button type="button" class="nav__btn" data-modal-mobile>
+          Buy now
+          <svg class="nav__icon" width="12" height="12">
+            <use href="./images/symbol-defs.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+        <div class="backdrop is-hidden" modal-backdrop>
+          <div class="modal-window">
+            <button class="modal-close" type="button" data-modal-mobile-close>
+              <svg width="20" height="20">
+                <use href="./images/symbol-defs.svg#icon-close"></use>
+              </svg>
+            </button>
+            <h2 class="modal-window__title">Byu now</h2>
+            <ul class="modal-window__list list">
+              <li class="modal-window__item">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/cream-ice-132.webp    1x,
+                      ./images/cream-ice-132@2x.webp 2x
+                    "
+                    media="(min-width: 320px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/cream-ice-132.jpg    1x,
+                      ./images/cream-ice-132@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <img
+                    class="modal-window__img image"
+                    src="./images/cream-ice-132.jpg"
+                    alt="Ice Creams"
+                  />
+                </picture>
+                <div class="ellipse ellipse__ice-cream"></div>
+                <div class="card card__ice-cream">
+                  <h3 class="modal-window__text">ICE CREAM</h3>
+                </div>
+              </li>
+              <li class="modal-window__item">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/ice-coffee-132.webp    1x,
+                      ./images/ice-coffee-132@2x.webp 2x
+                    "
+                    media="(min-width: 132px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/ice-coffee-132.jpg    1x,
+                      ./images/ice-coffee-132@2x.jpg 2x
+                    "
+                    media="(min-width: 132px)"
+                  />
+                  <img
+                    class="modal-window__img image"
+                    src="./images/ice-coffee-132.jpg"
+                    alt="ICE COFFEE"
+                  />
+                </picture>
+                <div class="ellipse ellipse__coffee"></div>
+                <div class="card card__ice-coffee">
+                  <h3 class="modal-window__text">ICE COFFEE</h3>
+                </div>
+              </li>
+              <li class="modal-window__item">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/milkshake-132.webp    1x,
+                      ./images/milkshake-132@2x.webp 2x
+                    "
+                    media="(min-width: 320px)"
+                    type="image/webp" />
+                  <source
+                    srcset="
+                      ./images/milkshake-132.jpg    1x,
+                      ./images/milkshake-132@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)" />
+                  <img
+                    class="modal-window__img image"
+                    src="./images/milkshake-132.jpg"
+                    alt="MILKSHAKE"
+                /></picture>
+                <div class="ellipse ellipse__milkshake"></div>
+                <div class="card card__milkshake">
+                  <h3 class="modal-window__text">MILKSHAKE</h3>
+                </div>
+              </li>
+            </ul>
+            <form class="modal-form">
+              <div class="modal-form__field">
+                <label for="user_name">
+                  <input
+                    class="modal-form__input"
+                    type="text"
+                    name="user"
+                    id="user_name"
+                    placeholder="Name"
+                  />
+                </label>
+              </div>
+              <div class="modal-form__field">
+                <label for="phone_number">
+                  <input
+                    class="modal-form__input"
+                    type="tel"
+                    name="tel"
+                    id="phone_number"
+                    placeholder="Phone"
+                  />
+                </label>
+              </div>
+              <div class="modal-form__field">
+                <label for="comment">
+                  <textarea
+                    class="modal-form__input modal-form__input--comment"
+                    name="comment"
+                    id="comment"
+                    placeholder="Comment"
+                  ></textarea>
+                </label>
+              </div>
+              <div class="modal-form__button">
+                <button class="modal-form__submit" type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </header>

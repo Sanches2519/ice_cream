@@ -3,7 +3,9 @@ body {
   font-family: $font-family-main;
   letter-spacing: 0.04em;
 }
-
+body.modal-open{
+  overflow: hidden;
+}
 h1,
 h2,
 h3,
