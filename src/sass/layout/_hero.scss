@@ -1,13 +1,16 @@
 .button {
   display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   align-items: center;
 }
 
-.hero__btn {
+.hero__link {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  cursor: pointer;
   width: 108px;
   height: 38px;
   padding: 0;
@@ -20,10 +23,10 @@
   border: 2px solid $background-color-btn;
   border-radius: 8px;
 }
-.hero__btn:last-child {
+.hero__link:last-child {
   margin-right: 0;
 }
-.hero__btn--dish {
+.hero__link--dish {
   width: 100px;
   height: 24px;
   padding: 0;
@@ -148,7 +151,7 @@
       margin-bottom: 0;
     }
   }
-  .hero__btn--dish {
+  .hero__link--dish {
     width: 114px;
     height: 24px;
   }
@@ -201,7 +204,7 @@
     font-size: 14px;
     line-height: 1.21;
   }
-  .hero__btn {
+  .hero__link {
     width: 134px;
     height: 42px;
     font-size: 14px;
