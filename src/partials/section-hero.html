@@ -1,6 +1,6 @@
 <section class="hero section-hero section">
   <div class="container hero__container">
-    <div class="heigth">
+     <div class="hero__content">
       <div class="street-food">
         <div>
           <h1 class="street-food__title">
@@ -17,107 +17,86 @@
         </div>
       </div>
       <ul class="button list">
-        <li><a class="hero__link link" href="#page-products">Products</a></li>
+        <li class="button__item">
+          <a href="#page-products" class="hero__link link"
+            >Products</a
+          >
+        </li>
         <li>
           <a class="hero__link hero__link--dish link" href="#about"
             >How it's made?</a
           >
         </li>
       </ul>
-      <picture>
-        <source
-          srcset="
-            ./images/ice-cream-desktop-1200.webp    1x,
-            ./images/ice-cream-desktop-1200@2x.webp 2x
-          "
-          media="(min-width: 1200px)"
-          type="image/webp"
-        />
-        <source
-          srcset="
-            ./images/ice-cream-desktop-1200.jpg    1x,
-            ./images/ice-cream-desktop-1200@2x.jpg 2x
-          "
-          media="(min-width: 1200px)"
-        />
-        <source
-          srcset="
-            ./images/ice-cream-tablet-768.webp    1x,
-            ./images/ice-cream-tablet-768@2x.webp 2x
-          "
-          media="(min-width: 768px)"
-          type="image/webp"
-        />
-        <source
-          srcset="
-            ./images/ice-cream-tablet-768.jpg    1x,
-            ./images/ice-cream-tablet-768@2x.jpg 2x
-          "
-          media="(min-width: 768px)"
-        />
-        <source
-          srcset="
-            ./images/ice-cream-mob-480.webp    1x,
-            ./images/ice-cream-mob-480@2x.webp 2x
-          "
-          media="(min-width: 480px)"
-          type="image/webp"
-        />
-        <source
-          srcset="
-            ./images/ice-cream-mob-480.jpg    1x,
-            ./images/ice-cream-mob-480@2x.jpg 2x
-          "
-          media="(min-width: 480px)"
-        />
-        <source
-          srcset="
-            ./images/ice-cream-mob-117.webp    1x,
-            ./images/ice-cream-mob-117@2x.webp 2x
-          "
-          media="(max-width: 479px)"
-          type="image/webp"
-        />
-        <source
-          srcset="
-            ./images/ice-cream-mob-117.jpg    1x,
-            ./images/ice-cream-mob-117@2x.jpg 2x
-          "
-          media="(max-width: 479px)"
-        />
-        <img
-          class="hero__img"
-          src="./images/ice-cream-mob-117.jpg"
-          alt="Ice cream"
-        />
-      </picture>
-      <picture>
-        <source
-          srcset="./images/point-1200.webp 1x, ./images/point-1200@2x.webp 2x"
-          media="(min-width: 1200px)"
-          type="image/webp"
-        />
-        <source
-          srcset="./images/point-1200.jpg 1x, ./images/point-1200@2x.jpg 2x"
-          media="(min-width: 1200px)"
-        />
-        <source
-          srcset="./images/point-768.webp 1x, ./images/point-768@2x.webp 2x"
-          media="(min-width: 768px)"
-          type="image/webp"
-        />
-        <source
-          srcset="./images/point-768.jpg 1x, ./images/point-768@2x.jpg 2x"
-          media="(min-width: 768px)"
-        />
-        <source
-          srcset="./images/point.webp 1x, ./images/point@2x.webp 2x"
-          media="(max-width: 767px)"
-          type="image/webp"
-        />
-        <source srcset="./images/point.jpg 1x, ./images/point@2x.jpg 2x" />
-        <img class="point-image" src="./images/point.jpg" alt="Point" />
-      </picture>
+  <div>
+    <picture>
+      <source
+        srcset="
+          ./images/ice-cream-desktop-1200.webp    1x,
+          ./images/ice-cream-desktop-1200@2x.webp 2x
+        "
+        media="(min-width: 1200px)"
+        type="image/webp"
+      />
+      <source
+        srcset="
+          ./images/ice-cream-desktop-1200.jpg    1x,
+          ./images/ice-cream-desktop-1200@2x.jpg 2x
+        "
+        media="(min-width: 1200px)"
+      />
+      <source
+        srcset="
+          ./images/ice-cream-tablet-768.webp    1x,
+          ./images/ice-cream-tablet-768@2x.webp 2x
+        "
+        media="(min-width: 768px)"
+        type="image/webp"
+      />
+      <source
+        srcset="
+          ./images/ice-cream-tablet-768.jpg    1x,
+          ./images/ice-cream-tablet-768@2x.jpg 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
+          ./images/ice-cream-mob-480.webp    1x,
+          ./images/ice-cream-mob-480@2x.webp 2x
+        "
+        media="(min-width: 480px)"
+        type="image/webp"
+      />
+      <source
+        srcset="
+          ./images/ice-cream-mob-480.jpg    1x,
+          ./images/ice-cream-mob-480@2x.jpg 2x
+        "
+        media="(min-width: 480px)"
+      />
+      <source
+        srcset="
+          ./images/ice-cream-mob-117.webp    1x,
+          ./images/ice-cream-mob-117@2x.webp 2x
+        "
+        media="(max-width: 479px)"
+        type="image/webp"
+      />
+      <source
+        srcset="
+          ./images/ice-cream-mob-117.jpg    1x,
+          ./images/ice-cream-mob-117@2x.jpg 2x
+        "
+        media="(max-width: 479px)"
+      />
+      <img
+        class="hero__img"
+        src="./images/ice-cream-mob-117.jpg"
+        alt="Ice cream"
+      />
+    </picture>
+  </div>
       <div class="lot-ice-cream">
         <picture>
           <source
@@ -161,13 +140,14 @@
             Indulge in a scoop of ice cream made with passion and treat your
             taste buds to an unforgettable experience!
           </p>
-          <a class="link" href="#products">
+          <a class="link" href="#page-products">
             <svg width="40" height="16">
               <use href="./images/symbol-defs.svg#icon-arrow"></use>
             </svg>
           </a>
         </div>
       </div>
-    </div>
+    
+     </div>
   </div>
 </section>

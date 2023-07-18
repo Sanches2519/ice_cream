@@ -31,3 +31,12 @@ ul {
   max-width: 100%;
   height: auto;
 }
+.link__border{
+  &:hover{
+    border-color: $link-border-background;
+  }
+  &:focus{
+    color: $main-color;
+    border-color: $link-border-background;
+  }
+}

@@ -1,3 +1,7 @@
+.hero__content {
+  position: relative;
+}
+
 .button {
   display: flex;
   flex-wrap: wrap;
@@ -22,6 +26,15 @@
   background-color: $section-background-color;
   border: 2px solid $background-color-btn;
   border-radius: 8px;
+  transition: $animation;
+ 
+  &:hover {
+    border-color: $link-border-background;
+  }
+  &:focus {
+    color: $main-color;
+    border-color: $link-border-background;
+  }
 }
 .hero__link:last-child {
   margin-right: 0;
@@ -42,12 +55,6 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
-.point-image {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
 .hero__img {
   position: absolute;
   background-size: cover;
@@ -56,18 +63,9 @@
   z-index: 1;
   background-size: auto;
 }
-.section-hero {
-  position: relative;
-}
-@media screen and (max-width: 1199px) {
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .section-hero {
-    padding-bottom: 12px;
-  }
-}
+
 @media screen and (max-width: 767px) {
-  .section-hero {
+  .hero__content {
     padding-bottom: 150px;
   }
   .street-food__title {
@@ -79,39 +77,75 @@
       line-height: 0.97;
     }
   }
-
-  .point-image {
-    height: 52px;
-    right: 0;
-    bottom: 0;
-  }
   .hero__img {
-    right: 28px;
+    right: 0;
     bottom: 0;
   }
   .lot-ice-cream {
     display: none;
   }
-  .institution{
+  .institution {
     display: none;
   }
 }
 @media screen and (max-width: 479px) {
-  .section-hero {
+  .hero__content {
     padding-bottom: 236px;
   }
-  .point-image {
-    width: 100%;
-    right: 0;
-    bottom: 0;
+  .hero__container {
+    background: url(../images/point-mob-320-left.png) 0 100%/107px 34px
+        no-repeat,
+      url(../images/point-mob-320-right.png) 100% 100%/127px 49px no-repeat;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero__container {
+      background: url(../images/point-mob-320-left@2x.png) 0 100%/107px 34px
+          no-repeat,
+        url(../images/point-mob-320-right@2x.png) 0 100%/127px 49px no-repeat;
+    }
   }
   .hero__img {
-    width: 50%;
-    right: 83px;
+    left: 60px;
     bottom: 0;
   }
 }
+@media screen and (min-width: 480px) {
+  .hero__container {
+    background: url(../images/point-mob-480-left.png) 43% 100%/110px 34px
+        no-repeat,
+      url(../images/point-mob-480-rigth.png) 100% 100%/130px 50px no-repeat;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero__container {
+      background: url(../images/point-mob-480-left@2x.png) 43% 100%/110px 34px
+          no-repeat,
+        url(../images/point-mob-480-rigth@2x.png) 0 100%/130px 50px no-repeat;
+    }
+  }
+}
 @media screen and (min-width: 768px) {
+  .hero__content {
+    padding-bottom: 12px;
+  }
+  .hero__container {
+    background: url(../images/point-taplet-768-left.png) 0 100%/110px 34px
+        no-repeat,
+      url(../images/point-tablet-768-rigth.png) 100% 100%/182px 68px no-repeat;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero__container {
+      background: url(../images/point-taplet-768-left@2x.png) 0 100%/110px 34px
+          no-repeat,
+        url(../images/point-tablet-768-rigth@2x.png) 100% 100%/182px 68px
+          no-repeat;
+    }
+  }
   .button {
     margin-bottom: 12px;
   }
@@ -147,7 +181,7 @@
     text-align: right;
     text-transform: none;
     letter-spacing: 0;
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
   }
@@ -180,9 +214,20 @@
   }
 }
 @media screen and (min-width: 1200px) {
-  .heigth {
-    position: relative;
-    height: 546px;
+  .hero__content {
+    padding-bottom: 65px;
+  }
+  .hero__container {
+    background: url(../images/point-desktop-1200.png) bottom/1200px 384px
+      no-repeat;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero__container {
+      background: url(../images/point-desktop-1200@2x.png) bottom/1200px 384px
+        no-repeat;
+    }
   }
   .street-food__title {
     font-size: 38px;
@@ -219,10 +264,6 @@
   }
   .button {
     margin-bottom: 42px;
-  }
-  .point-image {
-    right: -16px;
-    bottom: 0;
   }
   .lot-ice-cream__img {
     margin-right: 16px;
