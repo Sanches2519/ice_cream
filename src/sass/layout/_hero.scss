@@ -103,7 +103,7 @@
     .hero__container {
       background: url(../images/point-mob-320-left@2x.png) 0 100%/107px 34px
           no-repeat,
-        url(../images/point-mob-320-right@2x.png) 0 100%/127px 49px no-repeat;
+        url(../images/point-mob-320-right@2x.png) 100% 100%/127px 49px no-repeat;
     }
   }
   .hero__img {
@@ -123,7 +123,7 @@
     .hero__container {
       background: url(../images/point-mob-480-left@2x.png) 43% 100%/110px 34px
           no-repeat,
-        url(../images/point-mob-480-rigth@2x.png) 0 100%/130px 50px no-repeat;
+        url(../images/point-mob-480-rigth@2x.png) 100% 100%/130px 50px no-repeat;
     }
   }
 }
@@ -190,7 +190,7 @@
     height: 24px;
   }
   .hero__img {
-    right: 92px;
+    right: 55px;
     bottom: 0;
   }
   .lot-ice-cream {

@@ -9,11 +9,49 @@
           Sweet drinks based on milk and ice cream, supplemented with syrups,
           fruits, berries and other sweets of your choice
         </p>
-        <button class="variety__button" type="button">
+        <button class="variety__button" type="button" data-modal-ice-cream>
           <svg class="variety__image" width="40" height="16">
             <use href="./images/symbol-defs.svg#icon-arrow-1"></use>
           </svg>
         </button>
+        <div class="backdrop hidden" modal-ice-cream-backdrop>
+          <div class="modal-ice-cream">
+            <button
+              class="modal-close"
+              type="button"
+              data-modal-ice-cream-close
+            >
+              <svg width="20" height="20">
+                <use href="./images/symbol-defs.svg#icon-close"></use>
+              </svg>
+            </button>
+            <h4 class="modal-ice-cream__title">Chololate icecream</h4>
+            <div class="modal-ice-cream__image"></div>
+            <ul class="modal-ice-cream__list list">
+              <li class="modal-ice-cream__item">
+                <span class="modal-ice-cream__span">320</span>kcal
+              </li>
+              <li class="modal-ice-cream__item">
+                <span class="modal-ice-cream__span">4g</span>Prote...
+              </li>
+              <li class="modal-ice-cream__item">
+                <span class="modal-ice-cream__span">8,2g</span>Fats
+              </li>
+              <li class="modal-ice-cream__item">
+                <span class="modal-ice-cream__span">40,4g</span>Carbs
+              </li>
+            </ul>
+            <h5 class="modal-ice-cream__ingredietns">Ingredients</h5>
+            <div class="ingredients">
+              <p class="modal-ice-cream__text">Milk<span>100ml</span></p>
+              <p class="modal-ice-cream__text">Belgian chocolate 20g</p>
+              <p class="modal-ice-cream__text">Cream 150 ml</p>
+              <p class="modal-ice-cream__text">Cocoa powder 30g</p>
+              <p class="modal-ice-cream__text">Sugar 40g</p>
+              <p class="modal-ice-cream__text">Vanilla sugar 10g</p>
+            </div>
+          </div>
+        </div>
       </li>
       <li class="variety__item variety__item--coffee">
         <h3 class="variety__title">ICE COFFEE</h3>

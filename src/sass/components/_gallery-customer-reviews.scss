@@ -1,0 +1,20 @@
+.gallery-customer-reviews {
+  background-image: linear-gradient(
+      #84a178,
+      #84a178 32px,
+      rgba(0, 0, 0, 0) 32px
+    ),
+    url(../images/backgroud-mobile-885.jpg);
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section:nth-child(even) {
+    background-image: linear-gradient(
+        #84a178,
+        #84a178 32px,
+        rgba(0, 0, 0, 0) 32px
+      ),
+      url('../images/backgroud-mobile-885@2x.jpg');
+  }
+}

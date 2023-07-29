@@ -18,6 +18,14 @@ body {
   letter-spacing: 0.04em;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -44,6 +52,14 @@ ul {
   height: auto;
 }
 
+.link__border:hover {
+  border-color: #0A8817;
+}
+.link__border:focus {
+  color: #fcfcfc;
+  border-color: #0A8817;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -52,7 +68,6 @@ ul {
   .container {
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 20px;
   }
 }
 @media screen and (min-width: 480px) {
@@ -191,39 +206,38 @@ ul {
     height: 65px;
   }
 }
-.modal-window {
+.backdrop {
   position: fixed;
-  padding: 28px 28px;
-  z-index: 100;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.9);
-  width: 280px;
-  height: 991px;
-  background-color: #fcfcfc;
-  border-radius: 10px;
-  border: 2px solid #f8d24e;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  visibility: hidden;
-  opacity: 0;
-}
-.modal-window.show {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-  visibility: visible;
-}
-.modal-window__backdrop {
-  position: fixed;
-  pointer-events: none;
+  z-index: 50;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.6);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hidden {
+.is-hidden {
   opacity: 0;
-  display: none;
+  pointer-events: none;
+}
+
+.modal-window {
+  position: relative;
+  margin: 0 auto;
+  padding: 28px 28px;
+  width: 280px;
+  background-color: #fcfcfc;
+  border-radius: 10px;
+  border: 2px solid #f8d24e;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+}
+
+.backdrop.is-hidden.modal-window {
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
 }
 
 .modal-close {
@@ -231,11 +245,14 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  margin: 0;
   padding: 0;
   top: 12px;
   right: 12px;
   background-color: #fcfcfc;
   border: #fcfcfc;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-window__title {
@@ -457,7 +474,7 @@ ul {
   width: 100vw;
   height: 100vh;
   opacity: 0;
-  z-index: 999;
+  z-index: 30;
   overflow: auto;
   visibility: hidden;
   pointer-events: none;
@@ -620,16 +637,23 @@ ul {
     display: none;
   }
 }
+.hero__content {
+  position: relative;
+}
+
 .button {
   display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   align-items: center;
 }
 
-.hero__btn {
+.hero__link {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  cursor: pointer;
   width: 108px;
   height: 38px;
   padding: 0;
@@ -641,13 +665,21 @@ ul {
   background-color: #84a178;
   border: 2px solid #f8d24e;
   border-radius: 8px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hero__link:hover {
+  border-color: #0A8817;
+}
+.hero__link:focus {
+  color: #fcfcfc;
+  border-color: #0A8817;
 }
 
-.hero__btn:last-child {
+.hero__link:last-child {
   margin-right: 0;
 }
 
-.hero__btn--dish {
+.hero__link--dish {
   width: 100px;
   height: 24px;
   padding: 0;
@@ -665,12 +697,6 @@ ul {
   text-transform: uppercase;
 }
 
-.point-image {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
 .hero__img {
   position: absolute;
   background-size: cover;
@@ -680,17 +706,8 @@ ul {
   background-size: auto;
 }
 
-.section-hero {
-  position: relative;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .section-hero {
-    padding-bottom: 12px;
-  }
-}
 @media screen and (max-width: 767px) {
-  .section-hero {
+  .hero__content {
     padding-bottom: 150px;
   }
   .street-food__title {
@@ -701,13 +718,8 @@ ul {
     font-size: 34px;
     line-height: 0.97;
   }
-  .point-image {
-    height: 52px;
-    right: 0;
-    bottom: 0;
-  }
   .hero__img {
-    right: 28px;
+    right: 0;
     bottom: 0;
   }
   .lot-ice-cream {
@@ -718,29 +730,60 @@ ul {
   }
 }
 @media screen and (max-width: 479px) {
-  .section-hero {
+  .hero__content {
     padding-bottom: 236px;
   }
-  .point-image {
-    width: 100%;
-    right: 0;
+  .hero__container {
+    background: url(../images/point-mob-320-left.png) 0 100%/107px 34px no-repeat, url(../images/point-mob-320-right.png) 100% 100%/127px 49px no-repeat;
+  }
+}
+@media screen and (max-width: 479px) and (min-device-pixel-ratio: 2), screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 479px) and (min-resolution: 192dpi), screen and (max-width: 479px) and (min-resolution: 2dppx) {
+  .hero__container {
+    background: url(../images/point-mob-320-left@2x.png) 0 100%/107px 34px no-repeat, url(../images/point-mob-320-right@2x.png) 100% 100%/127px 49px no-repeat;
+  }
+}
+@media screen and (max-width: 479px) {
+  .hero__img {
+    left: 60px;
     bottom: 0;
   }
-  .hero__img {
-    width: 50%;
-    right: 83px;
-    bottom: 0;
+}
+@media screen and (min-width: 480px) {
+  .hero__container {
+    background: url(../images/point-mob-480-left.png) 43% 100%/110px 34px no-repeat, url(../images/point-mob-480-rigth.png) 100% 100%/130px 50px no-repeat;
+  }
+}
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  .hero__container {
+    background: url(../images/point-mob-480-left@2x.png) 43% 100%/110px 34px no-repeat, url(../images/point-mob-480-rigth@2x.png) 100% 100%/130px 50px no-repeat;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__content {
+    padding-bottom: 12px;
+  }
+  .hero__container {
+    background: url(../images/point-taplet-768-left.png) 0 100%/110px 34px no-repeat, url(../images/point-tablet-768-rigth.png) 100% 100%/182px 68px no-repeat;
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero__container {
+    background: url(../images/point-taplet-768-left@2x.png) 0 100%/110px 34px no-repeat, url(../images/point-tablet-768-rigth@2x.png) 100% 100%/182px 68px no-repeat;
   }
 }
 @media screen and (min-width: 768px) {
   .button {
     margin-bottom: 12px;
   }
+}
+@media screen and (min-width: 768px) {
   .street-food {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+}
+@media screen and (min-width: 768px) {
   .street-food__title {
     font-size: 26px;
     line-height: 1.26;
@@ -750,6 +793,8 @@ ul {
     font-size: 34px;
     line-height: 0.97;
   }
+}
+@media screen and (min-width: 768px) {
   .institution__text {
     margin-bottom: 4px;
     font-weight: 900;
@@ -759,6 +804,8 @@ ul {
     text-transform: uppercase;
     color: #131313;
   }
+}
+@media screen and (min-width: 768px) {
   .institution__desc {
     margin-bottom: 20px;
     font-weight: 400;
@@ -771,23 +818,33 @@ ul {
   .institution__desc:last-child {
     margin-bottom: 0;
   }
-  .hero__btn--dish {
+}
+@media screen and (min-width: 768px) {
+  .hero__link--dish {
     width: 114px;
     height: 24px;
   }
+}
+@media screen and (min-width: 768px) {
   .hero__img {
-    right: 92px;
+    right: 55px;
     bottom: 0;
   }
+}
+@media screen and (min-width: 768px) {
   .lot-ice-cream {
     display: flex;
     align-items: center;
   }
+}
+@media screen and (min-width: 768px) {
   .lot-ice-cream__img {
     position: relative;
     margin-right: 32px;
     z-index: 1;
   }
+}
+@media screen and (min-width: 768px) {
   .attract_text {
     width: 165px;
     height: 68px;
@@ -799,10 +856,19 @@ ul {
   }
 }
 @media screen and (min-width: 1200px) {
-  .heigth {
-    position: relative;
-    height: 546px;
+  .hero__content {
+    padding-bottom: 65px;
   }
+  .hero__container {
+    background: url(../images/point-desktop-1200.png) bottom/1200px 384px no-repeat;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero__container {
+    background: url(../images/point-desktop-1200@2x.png) bottom/1200px 384px no-repeat;
+  }
+}
+@media screen and (min-width: 1200px) {
   .street-food__title {
     font-size: 38px;
     line-height: 1.26;
@@ -812,38 +878,46 @@ ul {
     font-size: 38px;
     line-height: 1.26;
   }
+}
+@media screen and (min-width: 1200px) {
   .institution__text {
     font-size: 46px;
     line-height: 1.21;
   }
+}
+@media screen and (min-width: 1200px) {
   .institution__desc {
     margin-bottom: 16px;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.21;
   }
-  .hero__btn {
+}
+@media screen and (min-width: 1200px) {
+  .hero__link {
     width: 134px;
     height: 42px;
     font-size: 14px;
     line-height: 1.28;
     border-radius: 10px;
   }
-  .hero__btn--dish {
+  .hero__link--dish {
     width: 154px;
     height: 40px;
     line-height: 1.21;
   }
+}
+@media screen and (min-width: 1200px) {
   .button {
     margin-bottom: 42px;
   }
-  .point-image {
-    right: -16px;
-    bottom: 0;
-  }
+}
+@media screen and (min-width: 1200px) {
   .lot-ice-cream__img {
     margin-right: 16px;
   }
+}
+@media screen and (min-width: 1200px) {
   .attract_text {
     margin-bottom: 24px;
     width: 200px;
@@ -851,7 +925,7 @@ ul {
     font-size: 14px;
   }
 }
-.products {
+.product {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -1170,6 +1244,43 @@ ul {
     margin-bottom: 50px;
   }
 }
+.backdrop {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-ice-cream {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 28px;
+  width: 280px;
+  background-color: #fcfcfc;
+  border-radius: 10px;
+  border: 2px solid #f8d24e;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+}
+
+.modal-ice-cream__title {
+  color: #131313;
+  text-align: center;
+  font-family: "Seymour One", sans-serif;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
 .about {
   padding-top: 60px;
   padding-bottom: 60px;
