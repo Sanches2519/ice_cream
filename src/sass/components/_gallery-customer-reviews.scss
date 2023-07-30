@@ -5,6 +5,12 @@
       rgba(0, 0, 0, 0) 32px
     ),
     url(../images/backgroud-mobile-885.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $main-color;
 }
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
@@ -15,6 +21,52 @@
         #84a178 32px,
         rgba(0, 0, 0, 0) 32px
       ),
-      url('../images/backgroud-mobile-885@2x.jpg');
+      url(../images/backgroud-mobile-885@2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .gallery-customer-reviews {
+    background-image: linear-gradient(
+        #84a178,
+        #84a178 114px,
+        rgba(0, 0, 0, 0) 114px
+      ),
+      url(../images/background-tablet-983.jpg);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .section:nth-child(even) {
+      background-image: linear-gradient(
+          #84a178,
+          #84a178 114px,
+          rgba(0, 0, 0, 0) 114px
+        ),
+        url(../images/background-tablet-983@2x.jpg);
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery-customer-reviews{
+    .gallery-customer-reviews {
+      background-image: linear-gradient(
+          #84a178,
+          #84a178 114px,
+          rgba(0, 0, 0, 0) 114px
+        ),
+        url(../images/backgroud-desktop-1300.jpg);
+    }
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      .section:nth-child(even) {
+        background-image: linear-gradient(
+            #84a178,
+            #84a178 94px,
+            rgba(0, 0, 0, 0) 94px
+          ),
+          url(../images/backgroud-desktop-1300@2x.jpg);
+      }
+    }
   }
 }

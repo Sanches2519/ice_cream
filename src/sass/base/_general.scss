@@ -3,13 +3,13 @@ body {
   font-family: $font-family-main;
   letter-spacing: 0.04em;
 }
-body.modal-open{
+body.modal-open {
   overflow: hidden;
 }
-body.no-scroll{
+body.no-scroll {
   overflow: hidden;
 }
-body.open{
+body.open {
   overflow: hidden;
 }
 h1,
@@ -34,11 +34,11 @@ ul {
   max-width: 100%;
   height: auto;
 }
-.link__border{
-  &:hover{
+.link__border {
+  &:hover {
     border-color: $link-border-background;
   }
-  &:focus{
+  &:focus {
     color: $main-color;
     border-color: $link-border-background;
   }
